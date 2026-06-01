@@ -1,20 +1,20 @@
 -- Merging decision tree log ---
 provider#androidx.core.content.FileProvider
-INJECTED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:16:9-24:20
+INJECTED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:17:9-25:20
 	android:grantUriPermissions
-		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:20:13-47
+		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:21:13-47
 	android:authorities
 		INJECTED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml
-		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:18:13-64
+		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:19:13-64
 	android:exported
-		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:19:13-37
+		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:20:13-37
 	android:name
-		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:17:13-62
+		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:18:13-62
 manifest
-ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:2:1-44:12
-INJECTED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:2:1-44:12
-INJECTED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:2:1-44:12
-INJECTED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:2:1-44:12
+ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:2:1-45:12
 MERGED from [androidx.hilt:hilt-navigation-compose:1.2.0] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\7a475ffacd2cbb6766842642e5af4c53\transformed\hilt-navigation-compose-1.2.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.hilt:hilt-navigation:1.2.0] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\ae56020b67b74a94c3de0dec190ef56c\transformed\hilt-navigation-1.2.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.navigation:navigation-common:2.8.5] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\fa14891804f357bfad57d48fc5815e08\transformed\navigation-common-2.8.5\AndroidManifest.xml:17:1-22:12
@@ -76,7 +76,6 @@ MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\叶泳峰\.gradle\c
 MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\c71a05fd2eb922d762d846d162d0b9aa\transformed\annotation-experimental-1.4.1\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.dagger:dagger-lint-aar:2.53.1] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\2887a2e780e27d0a16bcc0983633adaa\transformed\dagger-lint-aar-2.53.1\AndroidManifest.xml:16:1-19:12
 	package
-		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:3:5-39
 		INJECTED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml
@@ -85,16 +84,20 @@ MERGED from [com.google.dagger:dagger-lint-aar:2.53.1] C:\Users\叶泳峰\.gradl
 	xmlns:android
 		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:5:5-80
+ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:4:5-80
 	android:name
-		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:5:22-77
+		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:4:22-77
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:6:5-81
+ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:5:5-81
 	android:name
-		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:6:22-78
+		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:5:22-78
+uses-permission#android.permission.MANAGE_EXTERNAL_STORAGE
+ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:6:5-82
+	android:name
+		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:6:22-79
 application
-ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:8:5-43:19
-INJECTED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:8:5-43:19
+ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:8:5-44:19
+INJECTED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:8:5-44:19
 MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\2917d65e512c0cea0539b7868ab883cd\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
 MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\2917d65e512c0cea0539b7868ab883cd\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
 MERGED from [androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\a7e132e05e204905f3dd83dae44f2975\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:23:5-33:19
@@ -109,10 +112,12 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\�
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\e59e610c45a779004604f44e7daf732e\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 	android:extractNativeLibs
 		INJECTED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml
+	android:requestLegacyExternalStorage
+		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:14:9-52
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.15.0] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\ede3347104e02be8e4b955b2728a8814\transformed\core-1.15.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:14:9-35
+		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:15:9-35
 	android:label
 		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:12:9-41
 	android:roundIcon
@@ -122,49 +127,49 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\�
 	android:allowBackup
 		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:10:9-35
 	android:theme
-		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:15:9-47
+		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:16:9-47
 	android:name
 		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:9:9-37
 activity#com.elephenman.docviewer.ui.MainActivity
-ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:25:9-42:20
+ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:26:9-43:20
 	android:exported
-		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:27:13-36
+		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:28:13-36
 	android:theme
-		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:28:13-51
+		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:29:13-51
 	android:name
-		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:26:13-44
+		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:27:13-44
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:29:13-32:29
+ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:30:13-33:29
 action#android.intent.action.MAIN
-ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:30:17-69
+ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:31:17-69
 	android:name
-		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:30:25-66
+		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:31:25-66
 category#android.intent.category.LAUNCHER
-ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:31:17-77
+ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:32:17-77
 	android:name
-		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:31:27-74
+		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:32:27-74
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.DEFAULT+data:mimeType:text/html+data:mimeType:text/markdown+data:mimeType:text/plain+data:scheme:content+data:scheme:file
-ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:33:13-41:29
+ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:34:13-42:29
 action#android.intent.action.VIEW
-ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:34:17-69
+ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:35:17-69
 	android:name
-		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:34:25-66
+		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:35:25-66
 category#android.intent.category.DEFAULT
-ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:35:17-76
+ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:36:17-76
 	android:name
-		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:35:27-73
+		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:36:27-73
 data
-ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:36:17-47
+ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:37:17-47
 	android:scheme
-		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:36:23-44
+		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:37:23-44
 	android:mimeType
-		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:38:23-51
+		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:39:23-51
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:21:13-23:54
+ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:22:13-24:54
 	android:resource
-		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:23:17-51
+		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:24:17-51
 	android:name
-		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:22:17-67
+		ADDED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:23:17-67
 uses-sdk
 INJECTED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml
