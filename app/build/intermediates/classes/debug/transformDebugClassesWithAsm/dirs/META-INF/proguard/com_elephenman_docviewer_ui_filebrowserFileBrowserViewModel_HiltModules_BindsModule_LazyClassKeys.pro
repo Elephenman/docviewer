@@ -1,0 +1,5 @@
+-keep,allowobfuscation,allowshrinking class com.elephenman.docviewer.ui.DocumentViewModel
+-keep,allowobfuscation,allowshrinking class com.elephenman.docviewer.ui.DocumentViewModel
+-keep,allowobfuscation,allowshrinking class com.elephenman.docviewer.ui.editor.EditorViewModel
+-keep,allowobfuscation,allowshrinking class com.elephenman.docviewer.ui.editor.EditorViewModel
+-keep,allowobfuscation,allowshrinking class com.elephenman.docviewer.ui.filebrowser.FileBrowserViewModel

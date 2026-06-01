@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DocViewer</string>
+    <string name="nav_edit">编辑</string>
+    <string name="nav_files">文件</string>
+    <string name="nav_read">阅读</string>
+    <style name="Theme.DocViewer" parent="android:Theme.Material.Light.NoActionBar">
+    </style>
+</resources>

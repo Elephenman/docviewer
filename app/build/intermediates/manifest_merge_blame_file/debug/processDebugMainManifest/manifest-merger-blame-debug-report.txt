@@ -1,0 +1,179 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.elephenman.docviewer"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+9        android:targetSdkVersion="35" />
+10
+11    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+11-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:5:5-80
+11-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:5:22-77
+12    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+12-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:6:5-81
+12-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:6:22-78
+13
+14    <permission
+14-->[androidx.core:core:1.15.0] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\ede3347104e02be8e4b955b2728a8814\transformed\core-1.15.0\AndroidManifest.xml:22:5-24:47
+15        android:name="com.elephenman.docviewer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+15-->[androidx.core:core:1.15.0] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\ede3347104e02be8e4b955b2728a8814\transformed\core-1.15.0\AndroidManifest.xml:23:9-81
+16        android:protectionLevel="signature" />
+16-->[androidx.core:core:1.15.0] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\ede3347104e02be8e4b955b2728a8814\transformed\core-1.15.0\AndroidManifest.xml:24:9-44
+17
+18    <uses-permission android:name="com.elephenman.docviewer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+18-->[androidx.core:core:1.15.0] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\ede3347104e02be8e4b955b2728a8814\transformed\core-1.15.0\AndroidManifest.xml:26:5-97
+18-->[androidx.core:core:1.15.0] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\ede3347104e02be8e4b955b2728a8814\transformed\core-1.15.0\AndroidManifest.xml:26:22-94
+19
+20    <application
+20-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:8:5-43:19
+21        android:name="com.elephenman.docviewer.DocViewerApp"
+21-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:9:9-37
+22        android:allowBackup="true"
+22-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:10:9-35
+23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+23-->[androidx.core:core:1.15.0] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\ede3347104e02be8e4b955b2728a8814\transformed\core-1.15.0\AndroidManifest.xml:28:18-86
+24        android:debuggable="true"
+25        android:extractNativeLibs="false"
+26        android:icon="@mipmap/ic_launcher"
+26-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:11:9-43
+27        android:label="@string/app_name"
+27-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:12:9-41
+28        android:roundIcon="@mipmap/ic_launcher_round"
+28-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:13:9-54
+29        android:supportsRtl="true"
+29-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:14:9-35
+30        android:theme="@style/Theme.DocViewer" >
+30-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:15:9-47
+31        <provider
+32            android:name="androidx.core.content.FileProvider"
+32-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:17:13-62
+33            android:authorities="com.elephenman.docviewer.fileprovider"
+33-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:18:13-64
+34            android:exported="false"
+34-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:19:13-37
+35            android:grantUriPermissions="true" >
+35-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:20:13-47
+36            <meta-data
+36-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:21:13-23:54
+37                android:name="android.support.FILE_PROVIDER_PATHS"
+37-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:22:17-67
+38                android:resource="@xml/file_paths" />
+38-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:23:17-51
+39        </provider>
+40
+41        <activity
+41-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:25:9-42:20
+42            android:name="com.elephenman.docviewer.ui.MainActivity"
+42-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:26:13-44
+43            android:exported="true"
+43-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:27:13-36
+44            android:theme="@style/Theme.DocViewer" >
+44-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:28:13-51
+45            <intent-filter>
+45-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:29:13-32:29
+46                <action android:name="android.intent.action.MAIN" />
+46-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:30:17-69
+46-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:30:25-66
+47
+48                <category android:name="android.intent.category.LAUNCHER" />
+48-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:31:17-77
+48-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:31:27-74
+49            </intent-filter>
+50            <intent-filter>
+50-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:33:13-41:29
+51                <action android:name="android.intent.action.VIEW" />
+51-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:34:17-69
+51-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:34:25-66
+52
+53                <category android:name="android.intent.category.DEFAULT" />
+53-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:35:17-76
+53-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:35:27-73
+54
+55                <data android:scheme="file" />
+55-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:36:17-47
+55-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:36:23-44
+56                <data android:scheme="content" />
+56-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:36:17-47
+56-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:36:23-44
+57                <data android:mimeType="text/html" />
+57-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:36:17-47
+57-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:38:23-51
+58                <data android:mimeType="text/markdown" />
+58-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:36:17-47
+58-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:38:23-51
+59                <data android:mimeType="text/plain" />
+59-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:36:17-47
+59-->A:\Dev\github\docviewer\app\src\main\AndroidManifest.xml:38:23-51
+60            </intent-filter>
+61        </activity>
+62
+63        <provider
+63-->[androidx.emoji2:emoji2:1.3.0] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\2917d65e512c0cea0539b7868ab883cd\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+64            android:name="androidx.startup.InitializationProvider"
+64-->[androidx.emoji2:emoji2:1.3.0] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\2917d65e512c0cea0539b7868ab883cd\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+65            android:authorities="com.elephenman.docviewer.androidx-startup"
+65-->[androidx.emoji2:emoji2:1.3.0] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\2917d65e512c0cea0539b7868ab883cd\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+66            android:exported="false" >
+66-->[androidx.emoji2:emoji2:1.3.0] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\2917d65e512c0cea0539b7868ab883cd\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+67            <meta-data
+67-->[androidx.emoji2:emoji2:1.3.0] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\2917d65e512c0cea0539b7868ab883cd\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+68                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+68-->[androidx.emoji2:emoji2:1.3.0] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\2917d65e512c0cea0539b7868ab883cd\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+69                android:value="androidx.startup" />
+69-->[androidx.emoji2:emoji2:1.3.0] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\2917d65e512c0cea0539b7868ab883cd\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+70            <meta-data
+70-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\a7e132e05e204905f3dd83dae44f2975\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:29:13-31:52
+71                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+71-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\a7e132e05e204905f3dd83dae44f2975\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:30:17-78
+72                android:value="androidx.startup" />
+72-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\a7e132e05e204905f3dd83dae44f2975\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:31:17-49
+73            <meta-data
+73-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\170168ab94e25a2345dbfad47b154704\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+74                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+74-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\170168ab94e25a2345dbfad47b154704\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+75                android:value="androidx.startup" />
+75-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\170168ab94e25a2345dbfad47b154704\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+76        </provider>
+77
+78        <receiver
+78-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\170168ab94e25a2345dbfad47b154704\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+79            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+79-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\170168ab94e25a2345dbfad47b154704\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+80            android:directBootAware="false"
+80-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\170168ab94e25a2345dbfad47b154704\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+81            android:enabled="true"
+81-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\170168ab94e25a2345dbfad47b154704\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+82            android:exported="true"
+82-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\170168ab94e25a2345dbfad47b154704\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+83            android:permission="android.permission.DUMP" >
+83-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\170168ab94e25a2345dbfad47b154704\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+84            <intent-filter>
+84-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\170168ab94e25a2345dbfad47b154704\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+85                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+85-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\170168ab94e25a2345dbfad47b154704\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+85-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\170168ab94e25a2345dbfad47b154704\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+86            </intent-filter>
+87            <intent-filter>
+87-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\170168ab94e25a2345dbfad47b154704\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+88                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+88-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\170168ab94e25a2345dbfad47b154704\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+88-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\170168ab94e25a2345dbfad47b154704\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+89            </intent-filter>
+90            <intent-filter>
+90-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\170168ab94e25a2345dbfad47b154704\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+91                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+91-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\170168ab94e25a2345dbfad47b154704\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+91-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\170168ab94e25a2345dbfad47b154704\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+92            </intent-filter>
+93            <intent-filter>
+93-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\170168ab94e25a2345dbfad47b154704\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+94                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+94-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\170168ab94e25a2345dbfad47b154704\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+94-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\叶泳峰\.gradle\caches\8.11.1\transforms\170168ab94e25a2345dbfad47b154704\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+95            </intent-filter>
+96        </receiver>
+97    </application>
+98
+99</manifest>

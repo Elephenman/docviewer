@@ -38,7 +38,6 @@ fun ViewerScreen(
                 webView.loadDataWithBaseURL(null, htmlContent, "text/html", "UTF-8", null)
             }
         },
-        modifier = Modifier.fillMaxSize(),
-        key = "webview_${document.uri}"
+        modifier = Modifier.fillMaxSize()
     )
 }

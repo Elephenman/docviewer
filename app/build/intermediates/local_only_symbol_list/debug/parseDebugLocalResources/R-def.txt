@@ -1,0 +1,10 @@
+R_DEF: Internal format may change without notice
+local
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string nav_edit
+string nav_files
+string nav_read
+style Theme.DocViewer
+xml file_paths

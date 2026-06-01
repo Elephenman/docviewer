@@ -2,8 +2,8 @@ package com.elephenman.docviewer.ui
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.MenuBook
 import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material.icons.filled.MenuBook
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
@@ -29,7 +29,7 @@ fun DocumentScreen(document: Document) {
         bottomBar = {
             NavigationBar {
                 NavigationBarItem(
-                    icon = { Icon(Icons.Default.MenuBook, contentDescription = "阅读") },
+                    icon = { Icon(Icons.AutoMirrored.Filled.MenuBook, contentDescription = "阅读") },
                     label = { Text("阅读") },
                     selected = currentMode == ViewMode.READ,
                     onClick = { currentMode = ViewMode.READ }
