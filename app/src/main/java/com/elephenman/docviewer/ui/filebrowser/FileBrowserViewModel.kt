@@ -62,7 +62,7 @@ class FileBrowserViewModel @Inject constructor(
         _selectedDocument.value = null
     }
 
-    private fun loadFiles() {
+    fun loadFiles() {
         viewModelScope.launch {
             val current = _currentPath.value
             val items = current.listFiles()?.map { file ->
