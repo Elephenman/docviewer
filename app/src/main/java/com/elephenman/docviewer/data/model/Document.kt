@@ -12,5 +12,6 @@ data class Document(
     val name: String,
     val content: String = "",
     val isModified: Boolean = false,
-    val type: DocumentType
+    val type: DocumentType,
+    val lastOpenedAt: Long = System.currentTimeMillis()
 )

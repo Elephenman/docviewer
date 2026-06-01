@@ -101,6 +101,10 @@ class FileBrowserViewModel @Inject constructor(
         }
     }
 
+    fun clearSearch() {
+        loadFiles()
+    }
+
     data class FileItem(
         val name: String,
         val path: String,

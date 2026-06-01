@@ -3,4 +3,10 @@
     <string name="nav_read">阅读</string>
     <string name="nav_edit">编辑</string>
     <string name="nav_files">文件</string>
+    <string name="nav_bookshelf">书架</string>
+    <string name="empty_bookshelf">书架空空如也</string>
+    <string name="empty_bookshelf_hint">浏览文件后将自动添加到书架</string>
+    <string name="search_files">搜索文件...</string>
+    <string name="back">返回</string>
+    <string name="close_search">关闭搜索</string>
 </resources>
