@@ -50,7 +50,10 @@ fun FileBrowserScreen(
             }
         ) { padding ->
             LazyColumn(modifier = Modifier.padding(padding)) {
-                items(files) { file ->
+                items(
+                    items = files,
+                    key = { it.path }
+                ) { file ->
                     FileItemRow(
                         file = file,
                         onClick = {

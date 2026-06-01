@@ -23,6 +23,7 @@ class EditorViewModel @Inject constructor(
     val isModified: StateFlow<Boolean> = _isModified
 
     private var currentDocument: Document? = null
+    private var onContentSaved: ((String) -> Unit)? = null
 
     private val saveFlow = _content
         .debounce(500)
@@ -34,6 +35,10 @@ class EditorViewModel @Inject constructor(
                 saveDocument(content)
             }
         }
+    }
+
+    fun setOnContentSavedListener(listener: (String) -> Unit) {
+        onContentSaved = listener
     }
 
     fun loadDocument(document: Document) {
@@ -51,7 +56,9 @@ class EditorViewModel @Inject constructor(
         currentDocument?.let { doc ->
             val updated = doc.copy(content = content, isModified = false)
             val success = documentRepository.saveDocument(updated)
-            if (!success) {
+            if (success) {
+                onContentSaved?.invoke(content)
+            } else {
                 _isModified.value = true
             }
         }

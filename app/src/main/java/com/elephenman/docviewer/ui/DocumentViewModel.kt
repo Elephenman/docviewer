@@ -21,7 +21,11 @@ class DocumentViewModel @Inject constructor() : ViewModel() {
         _currentDocument.value = null
     }
 
-    fun updateContent(content: String) {
+    fun updateDocumentContent(content: String) {
         _currentDocument.value = _currentDocument.value?.copy(content = content, isModified = true)
+    }
+
+    fun getCurrentContent(): String? {
+        return _currentDocument.value?.content
     }
 }

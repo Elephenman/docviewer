@@ -15,6 +15,7 @@ import com.elephenman.docviewer.data.model.Document
 @Composable
 fun EditorScreen(
     document: Document,
+    onContentSaved: ((String) -> Unit)? = null,
     viewModel: EditorViewModel = hiltViewModel()
 ) {
     val content by viewModel.content.collectAsState()
@@ -22,6 +23,12 @@ fun EditorScreen(
 
     LaunchedEffect(document) {
         viewModel.loadDocument(document)
+    }
+
+    LaunchedEffect(Unit) {
+        onContentSaved?.let { listener ->
+            viewModel.setOnContentSavedListener(listener)
+        }
     }
 
     DisposableEffect(document.uri) {

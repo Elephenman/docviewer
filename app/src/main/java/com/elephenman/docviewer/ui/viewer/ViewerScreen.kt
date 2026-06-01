@@ -27,11 +27,16 @@ fun ViewerScreen(
         factory = { context ->
             WebView(context).apply {
                 settings.javaScriptEnabled = false
+                settings.setSupportZoom(true)
+                settings.builtInZoomControls = true
+                settings.displayZoomControls = false
                 webViewClient = WebViewClient()
             }
         },
         update = { webView ->
-            webView.loadDataWithBaseURL(null, htmlContent, "text/html", "UTF-8", null)
+            if (htmlContent.isNotBlank()) {
+                webView.loadDataWithBaseURL(null, htmlContent, "text/html", "UTF-8", null)
+            }
         },
         modifier = Modifier.fillMaxSize(),
         key = "webview_${document.uri}"

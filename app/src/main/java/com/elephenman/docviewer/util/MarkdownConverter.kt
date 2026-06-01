@@ -9,10 +9,21 @@ object MarkdownConverter {
     private val parser: Parser = Parser.builder().build()
     private val renderer: HtmlRenderer = HtmlRenderer.builder().build()
 
+    private val htmlCache = mutableMapOf<String, String>()
+
     fun toHtml(markdown: String): String {
+        val hash = markdown.hashCode().toString()
+        htmlCache[hash]?.let { return it }
+
         val document: Node = parser.parse(markdown)
         val bodyHtml = renderer.render(document)
-        return wrapHtml(bodyHtml)
+        val result = wrapHtml(bodyHtml)
+        htmlCache[hash] = result
+        return result
+    }
+
+    fun clearCache() {
+        htmlCache.clear()
     }
 
     private fun wrapHtml(body: String): String {

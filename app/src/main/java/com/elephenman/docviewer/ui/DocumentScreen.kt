@@ -19,6 +19,11 @@ enum class ViewMode {
 @Composable
 fun DocumentScreen(document: Document) {
     var currentMode by remember { mutableStateOf(ViewMode.READ) }
+    var documentContent by remember { mutableStateOf(document.content) }
+
+    val updatedDocument = remember(documentContent) {
+        document.copy(content = documentContent)
+    }
 
     Scaffold(
         bottomBar = {
@@ -40,8 +45,13 @@ fun DocumentScreen(document: Document) {
     ) { padding ->
         Box(modifier = Modifier.padding(padding)) {
             when (currentMode) {
-                ViewMode.READ -> ViewerScreen(document = document)
-                ViewMode.EDIT -> EditorScreen(document = document)
+                ViewMode.READ -> ViewerScreen(document = updatedDocument)
+                ViewMode.EDIT -> EditorScreen(
+                    document = updatedDocument,
+                    onContentSaved = { newContent ->
+                        documentContent = newContent
+                    }
+                )
             }
         }
     }

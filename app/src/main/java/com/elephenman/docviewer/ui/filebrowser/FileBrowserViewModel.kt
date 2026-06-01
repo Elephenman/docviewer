@@ -9,9 +9,11 @@ import com.elephenman.docviewer.data.model.Document
 import com.elephenman.docviewer.data.repository.DocumentRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import java.io.File
 import javax.inject.Inject
 
@@ -26,6 +28,9 @@ class FileBrowserViewModel @Inject constructor(
 
     private val _files = MutableStateFlow<List<FileItem>>(emptyList())
     val files: StateFlow<List<FileItem>> = _files
+
+    private val _isLoading = MutableStateFlow(false)
+    val isLoading: StateFlow<Boolean> = _isLoading
 
     private val _selectedDocument = MutableStateFlow<Document?>(null)
     val selectedDocument: StateFlow<Document?> = _selectedDocument
@@ -73,10 +78,14 @@ class FileBrowserViewModel @Inject constructor(
 
     fun loadFiles() {
         viewModelScope.launch {
+            _isLoading.value = true
             val current = _currentPath.value
-            val fileList = current.listFiles()
+            val fileList = withContext(Dispatchers.IO) {
+                current.listFiles()
+            }
             if (fileList == null) {
                 _files.value = emptyList()
+                _isLoading.value = false
                 return@launch
             }
             val items = fileList.map { file ->
@@ -88,6 +97,7 @@ class FileBrowserViewModel @Inject constructor(
                 )
             }.sortedWith(compareByDescending<FileItem> { it.isDirectory }.thenBy { it.name.lowercase() })
             _files.value = items
+            _isLoading.value = false
         }
     }
 
