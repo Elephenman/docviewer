@@ -10,8 +10,9 @@ import androidx.compose.material.icons.filled.Folder
 import androidx.compose.material.icons.filled.InsertDriveFile
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
+import androidx.compose.runtime.getBy
 import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.elephenman.docviewer.data.model.Document
@@ -34,32 +35,34 @@ fun FileBrowserScreen(
         }
     }
 
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = { Text(currentPath.name.ifEmpty { "Storage" }) },
-                navigationIcon = {
-                    if (currentPath.parentFile != null) {
-                        IconButton(onClick = { viewModel.navigateUp() }) {
-                            Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
-                        }
-                    }
-                }
-            )
-        }
-    ) { padding ->
-        LazyColumn(modifier = Modifier.padding(padding)) {
-            items(files) { file ->
-                FileItemRow(
-                    file = file,
-                    onClick = {
-                        if (file.isDirectory) {
-                            viewModel.navigateTo(File(file.path))
-                        } else {
-                            viewModel.selectFile(file.path)
+    RequestStoragePermission(onPermissionGranted = { viewModel.loadFiles() }) {
+        Scaffold(
+            topBar = {
+                TopAppBar(
+                    title = { Text(currentPath.name.ifEmpty { "Storage" }) },
+                    navigationIcon = {
+                        if (currentPath.parentFile != null) {
+                            IconButton(onClick = { viewModel.navigateUp() }) {
+                                Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                            }
                         }
                     }
                 )
+            }
+        ) { padding ->
+            LazyColumn(modifier = Modifier.padding(padding)) {
+                items(files) { file ->
+                    FileItemRow(
+                        file = file,
+                        onClick = {
+                            if (file.isDirectory) {
+                                viewModel.navigateTo(File(file.path))
+                            } else {
+                                viewModel.selectFile(file.path)
+                            }
+                        }
+                    )
+                }
             }
         }
     }
