@@ -42,7 +42,7 @@ MainActivity (Hilt)
 
 前往 [Releases](https://github.com/Elephenman/docviewer/releases) 下载最新的 APK 安装包。
 
-> 当前版本: v1.0.0
+> 当前版本: v1.0.1
 
 ## 构建
 
