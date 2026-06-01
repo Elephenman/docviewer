@@ -24,7 +24,7 @@ fun EditorScreen(
         viewModel.loadDocument(document)
     }
 
-    DisposableEffect(Unit) {
+    DisposableEffect(document.uri) {
         onDispose {
             viewModel.forceSave()
         }

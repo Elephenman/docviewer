@@ -21,7 +21,7 @@ class FileBrowserViewModel @Inject constructor(
     private val documentRepository: DocumentRepository
 ) : ViewModel() {
 
-    private val _currentPath = MutableStateFlow(Environment.getExternalStorageDirectory())
+    private val _currentPath = MutableStateFlow(Environment.getExternalStorageDirectory() ?: File("/"))
     val currentPath: StateFlow<File> = _currentPath
 
     private val _files = MutableStateFlow<List<FileItem>>(emptyList())
@@ -51,7 +51,16 @@ class FileBrowserViewModel @Inject constructor(
 
     fun selectFile(path: String) {
         viewModelScope.launch {
-            val uri = Uri.fromFile(File(path))
+            val file = File(path)
+            val uri = if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+                androidx.core.content.FileProvider.getUriForFile(
+                    context,
+                    "${context.packageName}.fileprovider",
+                    file
+                )
+            } else {
+                Uri.fromFile(file)
+            }
             documentRepository.loadDocument(uri)?.let { doc ->
                 _selectedDocument.value = doc
             }
@@ -65,14 +74,19 @@ class FileBrowserViewModel @Inject constructor(
     fun loadFiles() {
         viewModelScope.launch {
             val current = _currentPath.value
-            val items = current.listFiles()?.map { file ->
+            val fileList = current.listFiles()
+            if (fileList == null) {
+                _files.value = emptyList()
+                return@launch
+            }
+            val items = fileList.map { file ->
                 FileItem(
                     name = file.name,
                     path = file.absolutePath,
                     isDirectory = file.isDirectory,
                     isSupported = file.extension.lowercase() in listOf("html", "htm", "md")
                 )
-            }?.sortedWith(compareByDescending<FileItem> { it.isDirectory }.thenBy { it.name.lowercase() }) ?: emptyList()
+            }.sortedWith(compareByDescending<FileItem> { it.isDirectory }.thenBy { it.name.lowercase() })
             _files.value = items
         }
     }

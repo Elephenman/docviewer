@@ -34,6 +34,11 @@ fun DocViewerNavHost(
         composable(Screen.Document.route) {
             currentDocument?.let { doc ->
                 DocumentScreen(document = doc)
+            } ?: run {
+                // Navigate back if no document is selected
+                LaunchedEffect(Unit) {
+                    navController.popBackStack()
+                }
             }
         }
     }

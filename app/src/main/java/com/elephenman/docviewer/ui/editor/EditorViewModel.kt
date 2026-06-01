@@ -50,7 +50,10 @@ class EditorViewModel @Inject constructor(
     private fun saveDocument(content: String) {
         currentDocument?.let { doc ->
             val updated = doc.copy(content = content, isModified = false)
-            documentRepository.saveDocument(updated)
+            val success = documentRepository.saveDocument(updated)
+            if (!success) {
+                _isModified.value = true
+            }
         }
     }
 

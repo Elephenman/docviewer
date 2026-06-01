@@ -33,6 +33,7 @@ fun ViewerScreen(
         update = { webView ->
             webView.loadDataWithBaseURL(null, htmlContent, "text/html", "UTF-8", null)
         },
-        modifier = Modifier.fillMaxSize()
+        modifier = Modifier.fillMaxSize(),
+        key = "webview_${document.uri}"
     )
 }
